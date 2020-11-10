@@ -7,21 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AForge;
 using AForge.Video;
-
-
 
 namespace PLC_CAMEAR_WinForm
 {
     public partial class Form1 : Form
     {
-       
-        private IVideoSource videoSource;
 
+        private IVideoSource videoSource;
         public Form1()
         {
             InitializeComponent();
+
         }
+
 
         private void video_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
@@ -29,7 +29,7 @@ namespace PLC_CAMEAR_WinForm
             pictureBox1.Image = bitmap;
         }
 
-        private void btnStart_Click(object sender, EventArgs e)
+        private void btn_Start_Click(object sender, EventArgs e)
         {
             string ConnectionString = "http://" + cameraIp.Text + "/axis-cgi/jpg/image.cgi";
             videoSource = new JPEGStream(ConnectionString);
@@ -37,7 +37,7 @@ namespace PLC_CAMEAR_WinForm
             videoSource.Start();
         }
 
-        private void btnStop_Click(object sender, EventArgs e)
+        private void btn_Stop_Click(object sender, EventArgs e)
         {
             videoSource.SignalToStop();
             if (videoSource != null && videoSource.IsRunning && pictureBox1.Image != null)
