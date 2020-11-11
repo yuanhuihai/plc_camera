@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "plc_camera", "plc_camera\plc_camera.csproj", "{1F7F29A0-6428-4327-9973-32A6F94B3573}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "plc_camera_wpf", "plc_camera\plc_camera_wpf.csproj", "{1F7F29A0-6428-4327-9973-32A6F94B3573}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLC_CAMEAR_WinForm", "PLC_CAMEAR_WinForm\PLC_CAMEAR_WinForm.csproj", "{D150F894-5D34-411C-9CEE-0CD02329A839}"
 EndProject
